@@ -34,6 +34,11 @@ public class QueueListAdapter extends ArrayAdapter<Queue> {
         return position;
     }
 
+    public void setQueues(List<Queue> queues) {
+        this.queues = queues;
+        this.notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -41,7 +46,7 @@ public class QueueListAdapter extends ArrayAdapter<Queue> {
 
         View view = LayoutInflater.from(this.context).inflate(R.layout.queue_item_template, null, false);
         TextView queueNameLabel = view.findViewById(R.id.queue_label);
-        queueNameLabel.setText(queue.getLabel());
+        queueNameLabel.setText(queue.getName().toUpperCase());
         return view;
     }
 }

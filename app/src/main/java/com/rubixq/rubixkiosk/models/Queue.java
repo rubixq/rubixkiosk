@@ -5,13 +5,13 @@ import org.json.JSONObject;
 
 public class Queue {
     private String id;
-    private String label;
+    private String name;
     private String title;
     private String description;
 
-    private Queue(String id, String label, String title, String description) {
+    public Queue(String id, String name, String title, String description) {
         this.id = id;
-        this.label = label;
+        this.name = name;
         this.title = title;
         this.description = description;
     }
@@ -20,8 +20,8 @@ public class Queue {
         return id;
     }
 
-    public String getLabel() {
-        return label;
+    public String getName() {
+        return name;
     }
 
     public String getTitle() {
@@ -32,16 +32,4 @@ public class Queue {
         return description;
     }
 
-    public static Queue newInstance(String id, String label, String title, String description){
-        return new Queue(id,label,title,description);
-    }
-
-    public static Queue fromJSON(JSONObject json) throws JSONException{
-        String id = (json.has("id")? json.getString("id") : "");
-        String label = (json.has("name")? json.getString("name") : "");
-        String title = (json.has("title")? json.getString("title") : "");
-        String description = (json.has("description")? json.getString("description") : "");
-
-        return Queue.newInstance(id,label,title,description);
-    }
 }

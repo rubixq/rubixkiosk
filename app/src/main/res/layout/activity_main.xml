@@ -5,18 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activities.MainActivity"
-    android:background="#143677">
+    android:background="#143677"
+    android:padding="32dp">
+
+    <ImageButton
+        android:id="@+id/btn_settings"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_settings"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_above="@+id/list_container"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/welcome_msg_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:text="PASSPORT OFFICE, TEMA"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textAlignment="center"
+            android:text="Please select an option"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list_container"
         android:layout_width="400dp"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="#194A9F">
+        android:background="#143677"
+        android:orientation="vertical">
 
         <ListView
             android:id="@+id/queue_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"/>
     </LinearLayout>
 
 </RelativeLayout>

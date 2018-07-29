@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Connection Settings">
+        <EditTextPreference
+            android:key="rubix_core_host"
+            android:summary="Provide link to rubix core server"
+            android:title="Rubix Core Host" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Application Settings">
+        <EditTextPreference
+            android:key="welcome_message"
+            android:summary="Provide welcome message to be shown"
+            android:title="Welcome Message" />
+
+        <CheckBoxPreference
+            android:key="show_ticket_number"
+            android:title="Show Ticket Numbers"
+            android:summary="Should ticket numbers be shown to customers"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Security Settings">
+        <EditTextPreference
+            android:key="admin_password"
+            android:summary="Provide password for administrative changes"
+            android:title="Administrative Password" />
+    </PreferenceCategory>
+</PreferenceScreen>
