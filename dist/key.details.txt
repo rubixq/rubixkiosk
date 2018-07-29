@@ -1,0 +1,2 @@
+Alias=RubixKiosk
+Password=Nf@2el3w
